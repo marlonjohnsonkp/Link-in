@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1020"><meta name="description" content="Personal career command center for job search, resume drafts, LinkedIn content and interview practice.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css"><title>CareerPilot — LinkedIn Career OS</title>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon">✦</div><div><b>CareerPilot</b><small>LINKEDIN CAREER OS</small></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <nav id="nav">
+      <button class="nav-item active" data-view="overview"><span>◈</span> Overview</button>
+      <button class="nav-item" data-view="jobs"><span>⌕</span> Job finder</button>
+      <button class="nav-item" data-view="resume"><span>▤</span> Resume studio</button>
+      <button class="nav-item" data-view="profile"><span>◎</span> Profile optimizer</button>
+      <button class="nav-item" data-view="posts"><span>✎</span> Post studio</button>
+      <button class="nav-item" data-view="tracker"><span>▦</span> Application tracker</button>
+      <button class="nav-item" data-view="alerts"><span>◉</span> Alerts & routines</button>
+      <button class="nav-item" data-view="interview"><span>◇</span> Interview coach</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="status-dot"></div><div><b>Local workspace</b><small>Your drafts stay in this browser</small></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button id="mobileMenu" class="icon-btn" aria-label="Open menu">☰</button><div class="crumb">Workspace <span>/</span> <b id="pageName">Overview</b></div><div class="top-actions"><span class="safe-pill">● Approval mode</span><button class="avatar" title="Local profile">MJ</button></div></header>
+    <div class="content">
+      <section id="view-overview" class="view active">
+        <div class="hero"><div><div class="eyebrow">YOUR CAREER, ORGANIZED</div><h1>Build your next chapter<span>.</span></h1><p>One focused workspace for your job search, profile, applications and interview prep.</p><div class="hero-actions"><button class="btn primary" data-go="jobs">＋ Add a job</button><button class="btn ghost" data-go="profile">Improve my profile ↗</button></div></div><div class="hero-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="hero-core">✦</div><div class="float-card card-one">↗ <b>Career momentum</b><small>One step at a time</small></div><div class="float-card card-two">✓ <b>Human approval</b><small>You stay in control</small></div></div></div>
+        <div class="notice"><span>ⓘ</span><div><b>Integration status: not connected</b><p>This first version works as a local career dashboard. Official LinkedIn OAuth/API access must be configured separately; no LinkedIn credentials are requested or stored here.</p></div></div>
+        <div class="section-head"><div><div class="eyebrow">AT A GLANCE</div><h2>Your pipeline</h2></div><span class="muted">Updates as you use the app</span></div>
+        <div class="stats"><div class="stat"><div class="stat-top"><span>Applications</span><span class="stat-icon purple">▦</span></div><strong id="statApps">0</strong><small>Tracked opportunities</small></div><div class="stat"><div class="stat-top"><span>Interviews</span><span class="stat-icon blue">◇</span></div><strong id="statInterviews">0</strong><small>Interview-stage roles</small></div><div class="stat"><div class="stat-top"><span>Saved drafts</span><span class="stat-icon gold">✎</span></div><strong id="statDrafts">0</strong><small>Posts and profile drafts</small></div><div class="stat"><div class="stat-top"><span>Follow-ups due</span><span class="stat-icon green">◷</span></div><strong id="statFollow">0</strong><small>Due today or overdue</small></div></div>
+        <div class="grid-two"><div class="panel"><div class="panel-head"><div><h3>Next best actions</h3><p>Small, repeatable steps beat random applying.</p></div><span class="panel-symbol">✦</span></div><div class="action-list"><button data-go="jobs"><span class="action-icon">⌕</span><span><b>Review job matches</b><small>Save relevant roles to your pipeline</small></span><span class="arrow">→</span></button><button data-go="profile"><span class="action-icon">◎</span><span><b>Strengthen your profile</b><small>Lead with your real skills and projects</small></span><span class="arrow">→</span></button><button data-go="posts"><span class="action-icon">✎</span><span><b>Prepare a project post</b><small>Share a genuine learning update</small></span><span class="arrow">→</span></button><button data-go="interview"><span class="action-icon">◇</span><span><b>Practice interview questions</b><small>Build confidence before the call</small></span><span class="arrow">→</span></button></div></div><div class="panel"><div class="panel-head"><div><h3>Career focus</h3><p>Based on your current background</p></div><span class="badge">FRESHER</span></div><div class="focus-card"><div class="focus-mark">FE</div><div><b>Frontend / Web Development</b><small>Primary target roles</small></div></div><div class="tags"><span>React.js</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Responsive UI</span></div><div class="mini-divider"></div><div class="profile-mini"><div class="mini-avatar">MJ</div><div><b>BSc Information Technology</b><small>KGiSL Web Development Internship · 2026</small></div></div><button class="text-btn" data-go="profile">Review profile details →</button></div></div>
+        <footer>CareerPilot is an independent personal tool, not affiliated with LinkedIn.</footer>
+      </section>
+
+      <section id="view-jobs" class="view">
+        <div class="page-title"><div><div class="eyebrow">DISCOVER & PRIORITIZE</div><h1>Job finder</h1><p>Use role searches to find opportunities, then save promising roles here.</p></div><a class="btn primary link-btn" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">Open LinkedIn Jobs ↗</a></div>
+        <div class="panel"><div class="panel-head"><div><h3>Suggested searches</h3><p>Open a search on LinkedIn; results are not scraped by this app.</p></div></div><div class="search-chips"><a href="https://www.linkedin.com/jobs/search/?keywords=React.js%20Intern" target="_blank" rel="noopener">React.js Intern ↗</a><a href="https://www.linkedin.com/jobs/search/?keywords=Frontend%20Developer%20Intern" target="_blank" rel="noopener">Frontend Developer Intern ↗</a><a href="https://www.linkedin.com/jobs/search/?keywords=Web%20Development%20Intern" target="_blank" rel="noopener">Web Development Intern ↗</a><a href="https://www.linkedin.com/jobs/search/?keywords=Junior%20Frontend%20Developer" target="_blank" rel="noopener">Junior Frontend Developer ↗</a><a href="https://www.linkedin.com/jobs/search/?keywords=Software%20Developer%20Intern" target="_blank" rel="noopener">Software Developer Intern ↗</a></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Add opportunity</h3><p>Enter a job you found. The app will store it in this browser.</p></div></div><form id="jobForm" class="form-grid"><label>Company<input required name="company" placeholder="e.g. Acme Technologies"></label><label>Role<input required name="role" placeholder="e.g. Frontend Developer Intern"></label><label>Location<input name="location" placeholder="Remote / Kochi / Bengaluru"></label><label>Job type<select name="type"><option>Internship</option><option>Full-time</option><option>Part-time</option><option>Apprenticeship</option></select></label><label class="span-2">Job URL<input name="url" type="url" placeholder="https://..."></label><label>Match score<select name="score"><option value="5">5 — Strong fit</option><option value="4">4 — Good fit</option><option value="3" selected>3 — Possible</option><option value="2">2 — Stretch</option><option value="1">1 — Low fit</option></select></label><label>Follow-up date<input name="followup" type="date"></label><label class="span-2">Notes / key skills<textarea name="notes" rows="2" placeholder="Required skills, deadline, referral details…"></textarea></label><div class="span-2 form-end"><button class="btn primary" type="submit">＋ Save opportunity</button></div></form></div>
+        <div class="panel"><div class="panel-head"><div><h3>Saved opportunities</h3><p>Choose an item to update its application status in the tracker.</p></div><span class="count" id="jobCount">0 roles</span></div><div id="jobList" class="empty-state">No opportunities yet. Add your first role above.</div></div>
+      </section>
+
+      <section id="view-resume" class="view">
+        <div class="page-title"><div><div class="eyebrow">APPLICATION-READY MATERIALS</div><h1>Resume studio</h1><p>Draft a truthful, role-specific summary from your background.</p></div></div>
+        <div class="notice"><span>ⓘ</span><div><b>AI connection not configured</b><p>This version generates an editable starter draft locally. It does not call an AI model or invent job requirements.</p></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Tailor your summary</h3><p>Paste the role and job description to prepare a starting point.</p></div></div><form id="resumeForm" class="form-grid"><label>Target role<input name="role" value="Frontend Developer Intern"></label><label>Company (optional)<input name="company" placeholder="Company name"></label><label class="span-2">Job description<textarea name="jd" rows="5" placeholder="Paste the job description here…"></textarea></label><div class="span-2 form-end"><button class="btn primary" type="submit">Generate resume draft</button></div></form></div>
+        <div class="panel"><div class="panel-head"><div><h3>Editable draft</h3><p>Verify every statement before using it.</p></div><button class="btn small ghost" id="copyResume">Copy draft</button></div><textarea id="resumeOutput" class="output-area" rows="16">MARLON JOHNSON
+BSc Information Technology Student | Aspiring Frontend Developer
+
+PROFESSIONAL SUMMARY
+BSc Information Technology student with practical web development experience gained through a 60-hour web development internship at KGiSL, Coimbatore. Building hands-on projects using HTML, CSS, JavaScript and React.js. Interested in frontend and web development opportunities where I can contribute, learn from experienced developers and strengthen my software engineering fundamentals.
+
+INTERNSHIP
+KGiSL, Coimbatore — Web Development Intern
+May 2026 | 60-hour internship
+• Completed a short web development internship.
+• Add only the specific tasks, tools and outcomes you actually completed.
+
+PROJECTS
+Ecommerce-react — React / Vite
+• Add the features you implemented and include the verified GitHub/live demo URL.
+
+Marlo — Shoe e-commerce website
+• Describe your actual UI, responsive design and shopping features.
+
+College Survival OS — College project
+• Describe your contribution, technologies and project outcome.
+
+EDUCATION
+BSc Information Technology — Sahrdaya College of Advanced Studies
+Expected graduation: 2027
+
+SKILLS
+HTML, CSS, JavaScript (foundational), React.js (project experience) — adjust to your current proficiency.</textarea></div>
+      </section>
+
+      <section id="view-profile" class="view">
+        <div class="page-title"><div><div class="eyebrow">BE CLEAR. BE CREDIBLE.</div><h1>Profile optimizer</h1><p>Profile drafts based on your current education, internship and projects.</p></div><a class="btn ghost link-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">Open LinkedIn ↗</a></div>
+        <div class="panel"><div class="panel-head"><div><h3>Headline</h3><p>Clear keywords without overstating experience.</p></div><button class="btn small ghost" data-copy="headline">Copy</button></div><textarea id="headline" rows="2">BSc IT Student | Aspiring Frontend Developer | HTML, CSS, JavaScript & React.js | Web Development Intern at KGiSL</textarea></div>
+        <div class="panel"><div class="panel-head"><div><h3>About section</h3><p>Keep it human, specific and accurate.</p></div><button class="btn small ghost" data-copy="about">Copy</button></div><textarea id="about" rows="7">I'm a BSc Information Technology student at Sahrdaya College of Advanced Studies, building practical skills in web development and frontend engineering.
+
+I completed a 60-hour web development internship at KGiSL, Coimbatore, in May 2026. I'm continuing to learn by building projects, including a React/Vite e-commerce project and other web development work.
+
+Areas I'm working with:
+• HTML and CSS
+• JavaScript fundamentals
+• React.js and responsive UI development
+• Git and GitHub
+
+I'm interested in web development internships and suitable entry-level opportunities where I can contribute, learn from a team, and keep improving through real projects.
+
+Projects and code: add your verified GitHub and portfolio links here.</textarea></div>
+        <div class="panel"><div class="panel-head"><div><h3>Profile checklist</h3><p>Tick items off as you update LinkedIn.</p></div><span class="count" id="checkCount">0 / 6</span></div><div id="profileChecks" class="check-list"></div></div>
+      </section>
+
+      <section id="view-posts" class="view">
+        <div class="page-title"><div><div class="eyebrow">BUILD IN PUBLIC</div><h1>Post studio</h1><p>Draft useful updates. Publishing remains a manual, approved action.</p></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Draft a post</h3><p>Choose a topic and adjust the draft to reflect what really happened.</p></div></div><form id="postForm" class="form-grid"><label>Topic<select name="topic"><option>Project update</option><option>What I learned</option><option>Internship reflection</option><option>Portfolio update</option><option>Technical lesson</option></select></label><label>Project / technology<input name="project" placeholder="e.g. Ecommerce-react using React + Vite"></label><label class="span-2">What did you actually build or learn?<textarea name="details" rows="3" placeholder="Your real contribution, challenge and takeaway…"></textarea></label><div class="span-2 form-end"><button class="btn primary" type="submit">Generate draft</button></div></form></div>
+        <div class="panel"><div class="panel-head"><div><h3>Your draft</h3><p>Edit before posting.</p></div><button class="btn small ghost" id="copyPost">Copy draft</button></div><textarea id="postOutput" rows="8" class="output-area" placeholder="Your generated post will appear here…"></textarea><div class="form-end"><a class="btn ghost link-btn" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">Open LinkedIn feed ↗</a><button id="savePost" class="btn primary">Save draft</button></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Saved drafts</h3><p>Drafts stored in this browser.</p></div></div><div id="postList" class="empty-state">No saved posts yet.</div></div>
+      </section>
+
+      <section id="view-tracker" class="view">
+        <div class="page-title"><div><div class="eyebrow">FOLLOW THROUGH</div><h1>Application tracker</h1><p>Know what you applied for, what is next, and when to follow up.</p></div><button class="btn ghost" id="exportCsv">↓ Export CSV</button></div>
+        <div class="stats compact"><div class="stat"><div class="stat-top"><span>Total</span><span class="stat-icon purple">▦</span></div><strong id="trackTotal">0</strong></div><div class="stat"><div class="stat-top"><span>Applied</span><span class="stat-icon blue">↗</span></div><strong id="trackApplied">0</strong></div><div class="stat"><div class="stat-top"><span>Interviews</span><span class="stat-icon green">◇</span></div><strong id="trackInterview">0</strong></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Your pipeline</h3><p>Update a status from the dropdown.</p></div><span class="count" id="trackerCount">0 items</span></div><div id="trackerList" class="empty-state">Saved opportunities will appear here.</div></div>
+      </section>
+
+      <section id="view-alerts" class="view">
+        <div class="page-title"><div><div class="eyebrow">STAY CONSISTENT</div><h1>Alerts & routines</h1><p>Set your routine and open official job-search sources. This prototype does not run a background email monitor.</p></div></div>
+        <div class="grid-two"><div class="panel"><div class="panel-head"><div><h3>Weekly routine</h3><p>Customize a practical routine.</p></div></div><form id="routineForm" class="form-grid single"><label>Daily job review (minutes)<select name="minutes"><option>10</option><option selected>15</option><option>20</option><option>30</option></select></label><label>Weekly posts goal<select name="posts"><option>1</option><option selected>2</option><option>3</option></select></label><label>Follow-up cadence<select name="cadence"><option>3 business days</option><option selected>5 business days</option><option>7 business days</option></select></label><button class="btn primary" type="submit">Save routine</button></form><p class="muted" id="routineSaved">Routine is stored locally.</p></div><div class="panel"><div class="panel-head"><div><h3>Set up native job alerts</h3><p>LinkedIn sends alerts for searches you save.</p></div></div><ol class="steps"><li>Open LinkedIn Jobs.</li><li>Search a target role and select your preferred location.</li><li>Apply entry-level or internship filters.</li><li>Turn on the Job Alert toggle and choose delivery frequency.</li></ol><a class="btn primary link-btn" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">Configure LinkedIn alerts ↗</a></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Privacy & connection status</h3><p>Prototype security notes.</p></div></div><div class="integration-row"><span class="integration-icon">in</span><div><b>LinkedIn official API</b><small>Not connected — OAuth app registration and approved product permissions are required.</small></div><span class="badge warn">Not connected</span></div><div class="integration-row"><span class="integration-icon">✦</span><div><b>AI model</b><small>Not connected — add a server-side API integration to enable live AI generation.</small></div><span class="badge warn">Local drafts</span></div><div class="integration-row"><span class="integration-icon">🔒</span><div><b>Data storage</b><small>Stored in browser localStorage. Anyone using this browser profile may access it.</small></div><span class="badge">Local only</span></div></div>
+      </section>
+
+      <section id="view-interview" class="view">
+        <div class="page-title"><div><div class="eyebrow">PRACTICE BEFORE THE CALL</div><h1>Interview coach</h1><p>Practice core frontend concepts and explain your projects clearly.</p></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Question practice</h3><p>Pick a topic, answer out loud or type a response, then reveal a checklist.</p></div></div><div class="form-grid"><label>Topic<select id="interviewTopic"><option value="html">HTML & CSS</option><option value="js">JavaScript</option><option value="react">React</option><option value="project">Project discussion</option><option value="hr">HR / behavioral</option></select></label><div class="form-end"><button class="btn primary" id="newQuestion">New question</button></div></div><div class="question-card"><div class="eyebrow" id="questionTopic">HTML & CSS</div><h2 id="questionText">What is the difference between semantic and non-semantic HTML elements?</h2><textarea id="answerText" rows="4" placeholder="Write your answer here…"></textarea><button id="revealAnswer" class="btn ghost">Reveal answer checklist</button><div id="answerHint" class="answer-hint hidden"></div></div></div>
+      </section>
+    </div>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+<script>if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});</script>
+</body></html>
