@@ -1,0 +1,17 @@
+{
+  "name": "CareerPilot \u2014 LinkedIn Career OS",
+  "short_name": "CareerPilot",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080c18",
+  "theme_color": "#0b1020",
+  "description": "A personal career dashboard for job search, resume drafts, profile optimization and interview practice.",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
